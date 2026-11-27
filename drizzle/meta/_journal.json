@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1786765804274,
+      "tag": "0000_funny_the_phantom",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1786778485302,
+      "tag": "0001_yellow_leopardon",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1786847197522,
+      "tag": "0002_mature_king_bedlam",
+      "breakpoints": true
+    }
+  ]
+}

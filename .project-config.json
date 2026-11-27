@@ -1,0 +1,45 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [
+    "db",
+    "server",
+    "user"
+  ],
+  "dev_command": "pnpm run dev",
+  "env_vars": {
+    "DATABASE_URL": "mysql://3MHzpRYZnk1NagJ.b5bdd13739ba:QjNkVj03y2vEy42dHTz1@gateway03.us-east-1.prod.aws.tidbcloud.com:4000/ixRSwQyn458BaUFPtdUo6L?ssl={\"rejectUnauthorized\":true}",
+    "DRIZZLE_DATABASE_URL": "mysql://3MHzpRYZnk1NagJ.b5bdd13739ba:QjNkVj03y2vEy42dHTz1@gateway03.us-east-1.prod.aws.tidbcloud.com:4000/ixRSwQyn458BaUFPtdUo6L?ssl={\"rejectUnauthorized\":true}",
+    "MANUS_WEBDEV_PROJECT_ID": "ixRSwQyn458BaUFPtdUo6L"
+  },
+  "experiments": [
+    "no_db_push"
+  ],
+  "git_remote": {
+    "repo_url": "https://7f0548f6b28a1758d9bf7be630d36cb4.artifacts.cloudflare.net/git/prod/ixRSwQyn458BaUFPtdUo6L.git",
+    "expiration": "2026-11-27T07:19:34.317Z",
+    "token": "art_v2_x_1083d909621dda9447926e0f35a1ecabb461a60f?expires=1795763974",
+    "backend": "GIT_BACKEND_ARTIFACTS"
+  },
+  "name": "neon-velocity",
+  "path": "/home/ubuntu/neon-velocity",
+  "port": 3000,
+  "runtime_endpoints": null,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "37pUk8nb9vbYQ7MrHfGkV5",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "QKqqxVUBbQFwCwxitPo9v5",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "許許臻豪",
+    "OWNER_OPEN_ID": "7hHeGrhU75wC6MviGpi2vW",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "48299204-1f37-4d1a-860c-dc02971eb9f7",
+    "VITE_APP_ID": "ixRSwQyn458BaUFPtdUo6L",
+    "VITE_APP_LOGO": "https://files.manuscdn.com/user_upload_by_module/web_dev_logo/310519663888692305/YEPbHayHbbFHLnbz.png",
+    "VITE_APP_TITLE": "NEON VELOCITY",
+    "VITE_FRONTEND_FORGE_API_KEY": "U956kFGX58aGMxWKSFp2wf",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-db-user",
+  "test_command": "pnpm test"
+}

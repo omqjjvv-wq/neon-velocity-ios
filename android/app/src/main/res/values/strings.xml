@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">NEON VELOCITY</string>
+    <string name="title_activity_main">NEON VELOCITY</string>
+    <string name="package_name">space.manus.neonvelocity</string>
+    <string name="custom_url_scheme">space.manus.neonvelocity</string>
+</resources>
