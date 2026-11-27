@@ -14,13 +14,16 @@ jobs:
       - name: Checkout project
         uses: actions/checkout@v4
 
+      # package.json already pins pnpm via its packageManager field.
+      # Do not add a second version here.
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -33,6 +36,10 @@ jobs:
 
       - name: Build unsigned iOS archive
         run: |
+          set -euo pipefail
+          rm -rf build
+          mkdir -p build
+
           xcodebuild \
             -project ios/App/App.xcodeproj \
             -scheme App \
@@ -46,13 +53,16 @@ jobs:
 
       - name: Package unsigned IPA
         run: |
+          set -euo pipefail
+          rm -rf build/Payload
           mkdir -p build/Payload
           cp -R build/App.xcarchive/Products/Applications/App.app build/Payload/App.app
           cd build
-          zip -r NEON-VELOCITY-unsigned.ipa Payload
+          /usr/bin/zip -qr NEON-VELOCITY-unsigned.ipa Payload
 
-      - name: Upload IPA
+      - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
           name: NEON-VELOCITY-iOS-unsigned
           path: build/NEON-VELOCITY-unsigned.ipa
+          retention-days: 30
